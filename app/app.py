@@ -3,15 +3,17 @@ import os
 import sys
 import tempfile
 
-# Ensure src path is accessible
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Make "src" importable
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
 
-# Import your modules
-from src.segmentation.segment_image import segment_image
-from src.object_analysis.detect_objects import classify_images
-from src.text_extraction.extract_text import extract_text_from_images
-from src.summarization.summarize_data import summarize_objects
-from src.video_mode.video_pipeline import process_video
+# Correct imports
+from segmentation.segment_image import segment_image
+from object_analysis.detect_objects import classify_images
+from text_extraction.extract_text import extract_text_from_images
+from summarization.summarize_data import summarize_objects
+from video_mode.video_pipeline import process_video
+
+
 
 # Streamlit UI settings
 st.set_page_config(page_title="AI Vision System", layout="centered")
