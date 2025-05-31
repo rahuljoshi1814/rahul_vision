@@ -13,8 +13,6 @@ from text_extraction.extract_text import extract_text_from_images
 from summarization.summarize_data import summarize_objects
 from video_mode.video_pipeline import process_video
 
-
-
 # Streamlit UI settings
 st.set_page_config(page_title="AI Vision System", layout="centered")
 
